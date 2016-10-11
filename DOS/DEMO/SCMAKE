@@ -1,0 +1,26 @@
+###########################################################################
+#
+#   MAKE-MY-DAY file for DEMO
+#   for Symemtec C/C++ & Pharlap DOS Extender
+#
+#   Programmer : Tan Khir Hien
+#   Copyright Creative Labs/Creative Technology Ltd, 1994-1996
+#
+###########################################################################
+
+!if "$(lib)" == "sbk"
+INC=..\lib\sbklib\include
+CFLAGS=-mpi -o -DSBKLIB
+APILIB=..\lib\sbklib\flat\pawe32.lib
+!endif
+
+!if "$(lib)" == ""
+INC=..\lib\sf2lib\include
+CFLAGS=-mpi -o
+APILIB=..\lib\sf2lib\flat\pawe32.lib
+!endif
+
+
+demo.exe:    demo.c $(APILIB)
+             sc $(CFLAGS) -I$(INC) demo.c $(APILIB)
+

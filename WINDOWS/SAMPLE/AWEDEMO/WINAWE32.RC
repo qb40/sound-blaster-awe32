@@ -1,0 +1,183 @@
+//Microsoft Developer Studio generated resource script.
+//
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "resource.h"
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+WINAWE32MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Play MIDI File",             ID_FILE_OPEN
+        MENUITEM "&Stop MIDI File",             ID_STOP_MIDI
+        MENUITEM SEPARATOR
+        MENUITEM "&Quit",                       ID_QUIT
+    END
+    POPUP "&Settings"
+    BEGIN
+        POPUP "&Reverb"
+        BEGIN
+            MENUITEM "Room &1",                     ID_SETTINGS_REVERB_ROOM1
+            MENUITEM "Room &2",                     ID_SETTINGS_REVERB_ROOM2
+            MENUITEM "Room &3",                     ID_SETTINGS_REVERB_ROOM3
+            MENUITEM "Hall &1",                     ID_SETTINGS_REVERB_HALL1
+            MENUITEM "Hall &2",                     ID_SETTINGS_REVERB_HALL2
+            MENUITEM "&Plate",                      ID_SETTINGS_REVERB_PLATE
+            MENUITEM "&Delay",                      ID_SETTINGS_REVERB_DELAY
+            MENUITEM "Panning D&elay",              ID_SETTINGS_REVERB_PANNINGDELAY
+
+        END
+        POPUP "&Chorus"
+        BEGIN
+            MENUITEM "Chorus &1",                   ID_SETTINGS_CHORUS_CHORUS1
+
+            MENUITEM "Chorus &2",                   ID_SETTINGS_CHORUS_CHORUS2
+
+            MENUITEM "Chorus &3",                   ID_SETTINGS_CHORUS_CHORUS3
+
+            MENUITEM "Chorus &4",                   ID_SETTINGS_CHORUS_CHORUS4
+
+            MENUITEM "&Feedback Chorus",            ID_SETTINGS_CHORUS_FEEBACKCHORUS
+
+            MENUITEM "F&langer",                    ID_SETTINGS_CHORUS_FLANGER
+
+            MENUITEM "&Short Delay",                ID_SETTINGS_CHORUS_SHORTDELAY
+
+            MENUITEM "Short &Delay (FB)",           ID_SETTINGS_CHORUS_SHORTDELAYFB
+
+        END
+        MENUITEM SEPARATOR
+        POPUP "&SynthBank"
+        BEGIN
+            MENUITEM "&GM",                         ID_MISC_SYNTHBANK_GM
+            MENUITEM "&G&S",                        ID_MISC_SYNTHBANK_GS
+            MENUITEM "&MT-32",                      ID_MISC_SYNTHBANK_MT32
+        END
+        MENUITEM "&Load User Bank",             ID_LOAD_USERBANK
+        MENUITEM "Cl&ear User Bank",            ID_CLEAR_BANK
+        MENUITEM SEPARATOR
+        MENUITEM "&TriggerMe",                  ID_SETTINGS_TRIGGERME
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&DRAM Query",                 ID_QUERY_DRAM
+        MENUITEM "&Current Synth Mode Query",   ID_QUERY_SYNTH
+        MENUITEM SEPARATOR
+        MENUITEM "&About WinAWE32",             IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+ABOUTBOX DIALOG DISCARDABLE  22, 17, 144, 94
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About WinAWE"
+FONT 8, "System"
+BEGIN
+    CTEXT           "SB AWE32",IDC_STATIC,0,5,144,8
+    CTEXT           "Demo Application",IDC_STATIC,0,14,144,8
+    CTEXT           "Version 1.1.1",IDC_STATIC,0,26,144,8
+    DEFPUSHBUTTON   "Press This Huge Button",IDOK,7,62,131,30,WS_GROUP
+    LTEXT           "K.H. Cheng",IDC_STATIC,54,39,41,11
+    LTEXT           """Pobody's Nerfect !""",IDC_STATIC,42,49,70,10
+    ICON            IDI_ICON1,IDI_ICON1,115,20,18,20
+    ICON            IDI_ICON1,IDI_ICON2,10,20,18,20
+END
+
+TRIGGERME DIALOG DISCARDABLE  0, 0, 201, 129
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Trigger Me"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,90,191,34
+    PUSHBUTTON      "Note Off",IDC_BIGOFF,7,48,117,38
+    PUSHBUTTON      "Note On",IDC_BIGON,7,6,117,38
+    PUSHBUTTON      "ProgramChange",IDC_SETPATCH,129,71,70,14
+    EDITTEXT        IDC_PC,155,56,17,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "MIDI Channel",IDC_SETMIDI,129,30,70,14
+    EDITTEXT        IDC_MIDI,155,15,17,12,ES_AUTOHSCROLL
+    CTEXT           "0 - 15",IDC_STATIC,143,4,40,8
+    CTEXT           "0 - 127",IDC_STATIC,143,46,40,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON    DISCARDABLE     "WINAWE32.ICO"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resrc1.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""resource.h""\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

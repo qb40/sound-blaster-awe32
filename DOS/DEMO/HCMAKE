@@ -1,0 +1,28 @@
+###########################################################################
+#
+#   MAKE-MY-DAY file for DEMO
+#   for MetaWare High C & Pharlap DOS Extender
+#
+#   Programmer : Tan Khir Hien
+#   Copyright Creative Labs/Creative Technology Ltd, 1994
+#
+###########################################################################
+
+!if "$(lib)" == "sbk"
+INC=..\lib\sbklib\include
+CFLAGS=-c -O2 -DSBKLIB
+APILIB=..\lib\sbklib\flat\pawe32.lib
+!endif
+
+!if "$(lib)" == ""
+INC=..\lib\sf2lib\include
+CFLAGS=-c -O2
+APILIB=..\lib\sf2lib\flat\pawe32.lib
+!endif
+
+demo.exe:    demo.obj $(APILIB)
+             386link $* -lib $(APILIB) @hc386.lnk
+
+demo.obj:    demo.c
+             hc386 $(CFLAGS) -I$(INC) demo.c
+
